@@ -1,5 +1,4 @@
-<%= form_for[@member, @profile] do |f| %>
-    end
+<%= form_for[@member, @profile], html: { multipart: true } do |f| %>
   <% if profile.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
@@ -15,6 +14,10 @@
   <div class="field">
     <%= f.label :bio %>
     <%= f.text_area :bio %>
+  </div>
+
+  <div class="field">
+    <%= f.file_field :profile_pic %>
   </div>
 
   <div class="actions">
