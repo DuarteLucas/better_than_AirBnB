@@ -36,6 +36,8 @@ gem 'rspec', '~> 3.6'
 gem 'devise'
 
 gem 'pundit'
+
+gem "paperclip", "~> 4.3"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
